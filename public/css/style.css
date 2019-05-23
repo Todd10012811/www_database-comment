@@ -1,0 +1,578 @@
+*{
+    padding:0;
+    margin:0;
+}
+:root{
+    --MainContainerWidth: 70%;
+    --BoxColour:#141414;
+    --TechGreen: #00e40d;
+    --TechBlack:#141414;
+
+}
+body{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 0;
+    margin: 0 ;
+ 
+   
+}
+
+
+#banner {  
+  
+    width: var(--MainContainerWidth);
+   
+ 
+   
+}
+#banner2 {  
+  
+    width: var(--MainContainerWidth);
+    display:none;
+ 
+   
+}
+header {
+    text-align: center;
+    background-color: var(--TechBlack);
+
+}
+nav {
+   
+    background-color:var(--TechGreen);
+    text-align: center;
+ 
+
+}
+nav ul li{
+    display: inline;
+   
+    padding-bottom: 18px;
+    padding-top: 15px ;
+ 
+}
+nav ul {
+  
+    display: grid;
+    grid-template-columns:   1fr 1fr 1fr 1fr ;
+    width:var(--MainContainerWidth);
+    margin:0 auto;  
+    
+}
+nav a {
+    color: black ;
+    font-size: 20px; /*colour of nav buttons*/
+    font-weight:bold;
+}
+a:hover {
+    color: #030303; /*navigation button hover*/
+    text-decoration: none;
+    border-radius: 10px;
+}
+li:hover{
+ background-color: #00af09;
+ border-radius: 10px;
+}
+#current {
+    background-color:#008307;   
+    border-radius: 10px;
+}
+h1{
+    font-size:30px;
+    color: var(--TechGreen);
+    text-align: center;
+    padding:10px;
+    font-weight: normal;
+    
+}
+h2{
+    font-size: 25px;
+    color:var(--TechGreen);
+    padding: 20px;
+}
+
+p{
+    color: var(--TechGreen);
+    padding: 20px;
+
+}
+h3{
+    text-align: left;
+    padding:0;
+    padding-left:20px;
+    color: var(--TechGreen);
+    margin:0;
+}
+
+
+.container1 {
+    
+    background-color: rgb(73, 73, 73);
+    color: black;
+ 
+  
+    width:100%;
+
+ 
+}
+
+.form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+ 
+    margin:auto;
+    padding-top:20px;
+    grid-gap: 5px 10px;
+}
+.form label{
+    float:right;
+    color: var(--TechGreen);
+}
+.form input{
+    width:130px;
+    float:left;
+    border: #030303 1px solid;
+}
+.form .button{
+    background-color: var(--TechGreen);
+    height:40px;
+    color:#e8e8e8;
+    border: #030303 1px solid;
+
+  
+}
+.form2{
+   
+    padding-bottom:25px;
+}
+#textarea2{
+    display:none
+}
+.form2 .button2{
+    background-color: var(--TechGreen);
+    height:40px;
+    color:#e8e8e8;
+    border: #030303 1px solid;
+    width:130px;
+   
+   
+
+  
+
+}
+
+.content2{
+    display:grid;
+    grid-template-areas:
+    'box1 box1 box2'
+    'box1 box1 box2'
+    'box3 box3 box3' ;
+    grid-gap: 10px;
+   
+    width: var(--MainContainerWidth);
+    margin:0 auto;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+    
+
+   
+   
+  
+    
+}
+.content2 .map1{
+    text-align: center;
+    margin-bottom: 20px;
+
+  
+  }
+
+.map1 #map1{
+    width:30vw;
+    height:30vw;
+
+}
+#image1{
+    width: 70%;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    
+}
+.content1{
+    display:grid;
+    grid-template-areas:
+    'box1';
+    grid-gap: 10px;
+    width: var(--MainContainerWidth);
+    margin:0 auto;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+   
+   
+    
+}
+.content3{
+    display:grid;
+    grid-template-areas:
+    'box1'
+    'box2'
+    'box3';
+    grid-gap: 10px;
+    width: var(--MainContainerWidth);
+    margin:0 auto;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+   
+   
+    
+}
+.content4{
+    display:grid;
+    grid-template-areas:
+    'box1 box2'
+   ;
+    grid-gap: 10px;
+    width: var(--MainContainerWidth);
+    margin:0 auto;
+    padding-top:10px;
+    padding-left:10px;
+    padding-right:10px;
+   
+   
+    
+}
+#map {
+    height:300px ;  /* The height is 400 pixels */
+    width: 80%;
+    margin:0 auto; /* The width is the width of the web page */
+    padding-bottom: 10px;
+   }
+
+.content4 .box1, .content4 .box2{
+    margin-bottom: 10px;
+}
+.content1 .box1{
+    margin-bottom: 10px;
+
+}
+
+.box1 { 
+    grid-area: box1;
+    background-color:var(--BoxColour);
+    border-radius: 10px;
+    text-align: center;
+    
+   
+}
+.box1 p{
+    text-align: left;
+}
+.box2 { 
+    grid-area: box2;
+    background-color:var(--BoxColour);
+    border-radius: 10px;
+  
+}
+.box3 { 
+    grid-area: box3;
+    background-color:var(--BoxColour);
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    
+}
+.container{
+    padding-top:10px
+}
+.container .btn {
+    background-color:var(--TechGreen);
+    border-color: var(--TechBlack);
+
+
+ 
+
+}
+#center{
+    text-align: center;
+}
+.para1{
+    display:grid ;
+    grid-template-columns: 3fr 5fr;
+    padding-left:10px;
+    padding-right:10px;
+    
+}
+.para1 img{
+    padding-top: 30px;
+    width: 100%;
+    padding-left:20px;
+    
+}
+
+
+footer{
+    background-color: var(--TechBlack);
+    color:var(--TechGreen);
+   
+   
+}
+.FooterInfo{
+  
+    width:var(--MainContainerWidth);
+    margin:0 auto;
+    text-align: center;
+    padding-top:20px; 
+    padding-bottom:20px; 
+    display:grid;
+    grid-template-areas:
+    "footbox1 "
+    "footbox2 "
+    "footbox3 " ;
+    grid-gap: 10px;
+   
+  
+    
+}
+
+
+.footbox1{
+    text-align: center;
+    grid-area: footbox1;
+    font-weight: normal;
+    padding:0;
+ 
+}
+
+.footbox2{
+    text-align: center;
+    grid-area: footbox2;
+    font-weight: normal;
+    padding:0;
+}
+.footbox3{
+    text-align: center;
+    grid-area: footbox3;
+    font-weight: normal;
+    padding:0;
+}
+.icons{
+    width:50px;
+    margin:5px;
+}
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container1 {
+    width: 60%;
+  position: relative;
+  margin: auto;
+  padding-top:30px;
+  padding-bottom: 10px;
+
+}
+
+/* Hide the images by default */
+.mySlides1 {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev1, .next1 {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+
+
+  margin-top: -22px;
+  padding: 16px;
+  color: var(--TechBlack);
+  
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+
+}
+
+/* Position the "next button" to the right */
+.next1 {
+    left: 97%;
+  border-radius: 3px 0 0 3px;
+  background-color:var(--TechGreen);
+  border-radius: 10px;
+}
+.prev1{
+    right:97%;
+    background-color:var(--TechGreen);
+    border-radius: 10px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+
+/* Caption text */
+.text1 {
+  color: var(--TechGreen);
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: -47px;
+  width: 100%;
+  text-align: center;
+
+}
+
+/* Number text (1/3 etc) */
+.numbertext1 {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot1 {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  margin-bottom: 30px;
+  margin-top: 20px
+}
+
+.active1, .dot1:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+
+
+@media screen and (max-width: 900px){
+    :root{
+        --MainContainerWidth: 100%;
+
+    }
+
+}
+@media screen and (max-width: 650px){
+    nav ul li{
+        display: inline;
+        
+        padding-bottom: 13px;
+        padding-top: 10px ;
+      
+    }
+    nav a{
+        font-size: 15px
+    }
+footer .FooterInfo{
+    font-size: 70%;
+}
+footer .FooterInfo .footbox1{
+    font-size: 250%;
+}
+footer .FooterInfo .footbox2{
+    font-size: 200%;
+}
+#banner{
+    display:none;
+}
+#banner2 {  
+  
+    width: 50%;
+    display:block;
+    margin:0 auto;
+
+ 
+   
+}
+p{
+
+    padding: 2px;
+
+}
+
+#image1{
+    width: 60%;
+}
+
+.content4{
+    display:grid;
+    grid-template-areas:
+    'box1' 
+    'box2';
+}
+.content2{
+    display:grid;
+    grid-template-areas:
+    'box1' 
+    'box2'
+    'box3';
+
+}
+.map1 #map1{
+    width:60vw;
+    height:60vw;
+
+}
+.slideshow-container1{
+    width:90%
+}
+.para1{
+    display:grid ;
+    grid-template-columns: 1fr;
+}
+.para1 img{
+    padding-top: 30px;
+    width: 70%;
+    padding-right:10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+    margin:0 auto;
+}
+.content1 p{
+    padding-left:10px;
+    padding-right:10px;
+}
+.content2 p{
+    padding-left:10px;
+    padding-right:10px;
+}
+.content4 p{
+    padding-left:10px;
+    padding-right:10px;
+}
+#textarea1{
+    display:none
+}
+#textarea2{
+    display:block;
+    margin:0 auto;
+}
+
+
+}
