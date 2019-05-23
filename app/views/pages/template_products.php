@@ -96,7 +96,7 @@
                    
                 </div>
                 <div class="box3">
-                    <h1><?php echo $data['title'][18]['Properties']; ?></h1>
+                    <h1><?php echo $data['title'][18]['Properties'];  ?></h1>
                     <div class="para1">
                             <img src="<?php echo $data['image'][2]['Prop']; ?>"  alt="help">
                         <p><?php echo $data['paragraph'][19]['Properties']; ?></p>
