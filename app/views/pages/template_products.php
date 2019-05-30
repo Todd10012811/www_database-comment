@@ -40,7 +40,10 @@
                         <span class="dot1" onclick="currentSlide(2)"></span>
                         <span class="dot1" onclick="currentSlide(3)"></span>
                     </div>
-                </div>
+                    <form action="<?php echo URLROOT . 'pages/productlist/'; ?>">
+                    <button type="submit"  style="background-color:green;" class="btn btn-lg btn-block btn-primary">Jeff Click Here To See All Our Products! </button>
+                    </form>
+                  </div>
                 <div class="box2">
                     <h1>Services</h1>
                     <div class="container">
@@ -107,30 +110,35 @@
                     <div id="center">
 
                     <h2><?php echo $data['title'][20]['Properties']; ?></h2>
-                    <form name="form2" class="form2" action="<?php echo URLROOT . 'pages/products/'; ?>" method="POST" >
-                    <textarea name="Prop" id="Prop" cols="50vw" rows="5"></textarea>
-                   <br> <br>
-                    <input type="submit" class="button2" value="submit">
-                    </form>
-                    </div>
-                    <h2>  <?php 
+                    <form name="form2" class="form2" action="<?php echo URLROOT . 'pages/processFrom/'; ?>" method="POST" >
+                    
+                    <div><textarea name="Prop" id="Prop" cols="50vw" rows="5"></textarea></div>
+                   <br> <p>Name: <input type="text" name="FName" id="FName"></p> 
+                    <input type="submit" class="button2" value="submit"> <br>
+                    <h2>Comments:</h2>
+                    <?php 
                     $output = "";
-
-                   
-
-                    foreach($data['comments'] as $item) {
-
-                      
-
-
-                        $output .= $item['Prop'];
-                        
-                        $output .= "<br>";
+                      foreach($data['comments'] as $item) {
+                      $output .= "<h2>";
+                      $output .= $item['FName'];  
+                      $output .= "</h2>";
+                      $output .= "<h3>";
+                      $output .= $item['TDate'];
+                      $output .= "</h3>";
+                      $output .= "<p>";
+                      $output .= $item['Prop'];
+                      $output .= "<p>";
+                 
                     }
 
                     echo $output;
                 ?></h2>
                    <h2><?php echo $data['title2'] ?></h2>
+                    </form>
+                  
+                    </div>
+                    
+              
                 </div>
              
 

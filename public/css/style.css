@@ -20,6 +20,8 @@ body{
 }
 
 
+
+
 #banner {  
   
     width: var(--MainContainerWidth);
@@ -456,8 +458,11 @@ footer{
   background-color: #717171;
 }
 
-/* Fading animation */
+.content1.box1.fuck{
+    display: grid;
+  grid-template-columns: 1fr 1fr 1fr; grid-gap:20px; padding-left:20px; padding-right:20px;
 
+}
 
 @-webkit-keyframes fade {
   from {opacity: .4} 
@@ -573,6 +578,25 @@ p{
     display:block;
     margin:0 auto;
 }
-
+.grid-con {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+  }
+  
+  .grid-con > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    font-size: 30px;
+  }
+  #test{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: red;
+    color: red
+}
 
 }

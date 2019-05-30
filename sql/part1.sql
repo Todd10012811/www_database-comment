@@ -11,15 +11,16 @@ CREATE TABLE AppointmentRequest (
   PRIMARY KEY (IDN)
   
   );
+
+use containerdb;
+create TABLE ContactForm (
+
+  FName VARCHAR(30),
+  Lname Varchar(30),
+  Email varchar(100),
+  Phone varchar(30)
   
-CREATE TABLE ContactForm (
-  IDN varchar(10) NOT NULL,
-  Fname VARCHAR(30) NOT NULL,
-  LName Varchar(30)NOT NULL,
-  Email varchar(100)NOT NULL,
-  Phone varchar(30)NOT NULL,
-  FK varchar(10) NOT Null,
-  PRIMARY KEY (IDN)
+
 	
 );
 
@@ -40,9 +41,23 @@ CREATE TABLE Images (
 
 CREATE TABLE Comments (
   Indx VARCHAR(10),
-  Prop TEXT
+  Prop TEXT,
+  FName varchar(30),
+  TDate varchar (15)
 	
 );
+use containerdb;
+CREATE TABLE Products
+(
+ID int NOT NULL AUTO_INCREMENT,
+pname varchar(255) NOT NULL,
+discription varchar(255),
+pimage varchar(255),
+price varchar(255),
+brand varchar(255),
+rating varchar(255),
+PRIMARY KEY (ID)
+)
 
 
 INSERT INTO AppointmentRequest
@@ -55,16 +70,17 @@ VALUES
 ('Jerry Canister', '875 great south road', '13/4/2019 @3pm', '0223164971','045','4000'),
 ('Dick Winters', '23 sunny drive', '12/4/2019 @ 4pm', '0278156432','046','4000');
 
+use containerdb;
 
 INSERT INTO ContactForm 
-    (FName, Lname, Email, Phone, IDN, FK) 
+    (FName, Lname, Email, Phone) 
 VALUES 
-('James', 'Hawkins', 'JamesThompson@gmail.com', '02145678933','035','4000'),
-('Eddie', 'Thompson', 'EddieVedder@hotmail.com', '0278963541','036','4000'),
-('Jody', 'Jefferson', 'Jodie1234@gmail.com', '02245678912','037','4000'),
-('Lesley', 'Jackson', 'jackson5746@xtra.co.nz', '02715975346','038','4000'),
-('Bob', 'Royal', 'RoyalShinizzle@hotmail.com', '0226517954','039','4000'),
-('Brooke', 'Peterson', 'Chooky2019@gmail.com', '0278156432','040','4000');
+('James', 'Hawkins', 'JamesThompson@gmail.com', '02145678933'),
+('Eddie', 'Thompson', 'EddieVedder@hotmail.com', '0278963541'),
+('Jody', 'Jefferson', 'Jodie1234@gmail.com', '02245678912'),
+('Lesley', 'Jackson', 'jackson5746@xtra.co.nz', '02715975346'),
+('Bob', 'Royal', 'RoyalShinizzle@hotmail.com', '0226517954'),
+('Brooke', 'Peterson', 'Chooky2019@gmail.com', '0278156432');
 
 
 INSERT INTO Content
@@ -118,12 +134,23 @@ VALUES
 ('4','/images/img2.jpg'),
 ('5','/images/img3.jpg');
 
-
+use containerdb;
 INSERT INTO Comments
-    (Indx, Prop)
+    (Indx, Prop, FName)
 VALUES 
-('0','gfgdgh'),
-('1','gfdgfd'),
-('2','fdgfdgfd'),
-('3','gfdgfd');
+('0','gfgdgh','bob'),
+('1','gfdgfd','sam'),
+('2','fdgfdgfd','woody'),
+('3','gfdgfd','lesley');
 
+use containerdb;
+INSERT INTO Products
+    (pname, discription, pimage, price, brand, rating)
+VALUES 
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
+('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating');
