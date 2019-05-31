@@ -1,3 +1,24 @@
+function validation3(){
+  var _name = document.forms["form3"]["FName"];  
+  var _comment =  document.forms["form3"]["Prop"];  
+    
+     
+if (_name.value == "")                                  
+{ 
+          window.alert("Please enter your name"); 
+          _name.focus(); 
+          return false; 
+      }  
+      if (_comment.value == "")                                  
+      { 
+          window.alert("Please enter a comment"); 
+          _comment.focus(); 
+          return false; 
+      }  
+
+
+      return true; 
+    }
 var slideIndex = 1;
 showSlides(slideIndex);
 
@@ -38,5 +59,3 @@ function showSlides(n) {
         var marker = new google.maps.Marker({position: uluru, map: map});
       }
 
-
-  

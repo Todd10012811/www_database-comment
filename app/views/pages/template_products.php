@@ -108,32 +108,38 @@
 
                     </div>
                     <div id="center">
-
+    
                     <h2><?php echo $data['title'][20]['Properties']; ?></h2>
-                    <form name="form2" class="form2" action="<?php echo URLROOT . 'pages/processFrom/'; ?>" method="POST" >
+                    <form name="form3" class="form2" action="<?php echo URLROOT . 'pages/processFrom/'; ?>" onsubmit="return validation3()" method="POST" >
                     
                     <div><textarea name="Prop" id="Prop" cols="50vw" rows="5"></textarea></div>
                    <br> <p>Name: <input type="text" name="FName" id="FName"></p> 
                     <input type="submit" class="button2" value="submit"> <br>
                     <h2>Comments:</h2>
+                    <div style="display: grid;
+  grid-template-columns: 1fr 1fr   ; grid-gap:20px; padding-left:20px; padding-right:20px;">
                     <?php 
-                    $output = "";
+                      $output = "";
+                 
                       foreach($data['comments'] as $item) {
-                      $output .= "<h2>";
+                   
+                      $output .= "<div><h2 style='padding:0; margin:0;'>";
                       $output .= $item['FName'];  
+                      $output .= " says:";
                       $output .= "</h2>";
-                      $output .= "<h3>";
+                      $output .= "<h3 style='padding:0; margin:0;'>";
                       $output .= $item['TDate'];
                       $output .= "</h3>";
-                      $output .= "<p>";
+                      $output .= "<p style='padding:0; margin:0;'>";
                       $output .= $item['Prop'];
-                      $output .= "<p>";
+                      $output .= "<p></div>";
+                    
                  
                     }
 
                     echo $output;
-                ?></h2>
-                   <h2><?php echo $data['title2'] ?></h2>
+                ?></div>
+                   <h2><?php echo $data['title2'] ?>!</h2>
                     </form>
                   
                     </div>
@@ -147,7 +153,32 @@
         
     </section>
   
-    <script>var slideIndex = 1;
+    <script>
+
+    function validation3(){
+  var _name = document.forms["form3"]["FName"];  
+  var _comment =  document.forms["form3"]["Prop"];  
+    
+     
+if (_name.value == "")                                  
+{ 
+          window.alert("Please enter your name"); 
+          _name.focus(); 
+          return false; 
+      }  
+      if (_comment.value == "")                                  
+      { 
+          window.alert("Please enter a comment"); 
+          _comment.focus(); 
+          return false; 
+      }  
+
+
+      return true; 
+    }
+
+    
+var slideIndex = 1;
 showSlides(slideIndex);
 
 // Next/previous controls
@@ -186,7 +217,6 @@ function showSlides(n) {
         // The marker, positioned at Uluru
         var marker = new google.maps.Marker({position: uluru, map: map});
       }
-
 
 
   

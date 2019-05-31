@@ -40,7 +40,7 @@
          'paragraph' => $paragraph,
          'image' => $image,
          'comments' => $comments,
-         'title2' => "fds",
+         'title2' => ""
        ];
       
         $this->view('pages/template_products', $data);
@@ -74,7 +74,9 @@
       $data = [
         'title' => $title,
         'paragraph' => $paragraph,
-        'image' => $image
+        'image' => $image,
+        'message' => '',
+        'message2' => ''
       ];
 
       //$data['title2'];
@@ -86,24 +88,106 @@
         // add data or variables to the array using key-value pairs
         if(!empty($_POST['FName']) && !empty($_POST['Lname']) && !empty($_POST['Email']) && !empty($_POST['Phone']) ) {
           if($this->_page->addcontact($_POST['FName'],$_POST['Lname'],$_POST['Email'],$_POST['Phone'])) {
-          
-            //Redirect to home page
-            header("Location: ".URLROOT."pages/contact");
-            exit;
+            $title = $this->_page->title();
+            $paragraph = $this->_page->paragraph();
+            $image = $this->_page->image();
+         
+            $data = [
+              'title' => $title,
+              'paragraph' => $paragraph,
+              'image' => $image,
+              'message' => 'Form submitted',
+              'message2' => ''
+            ];
+            $this->view('pages/template_contact', $data);
           }
         } 
+        else{
+          $title = $this->_page->title();
+          $paragraph = $this->_page->paragraph();
+          $image = $this->_page->image();
+       
+          $data = [
+            'title' => $title,
+            'paragraph' => $paragraph,
+            'image' => $image,
+            'message' => 'Form not submitted',
+            'message2' => ''
+            
+          ];
+          $this->view('pages/template_contact', $data);
+        }
       }
+      public function process2() {
+        // add data or variables to the array using key-value pairs
+        if(!empty($_POST['Name2']) && !empty($_POST['Phone2']) && !empty($_POST['Address2']) && !empty($_POST['Time2']) ) {
+          if($this->_page->addcontact2($_POST['Name2'],$_POST['Phone2'],$_POST['Address2'],$_POST['Time2'])) {   $title = $this->_page->title();
+            $paragraph = $this->_page->paragraph();
+            $image = $this->_page->image();
+         
+            $data = [
+              'title' => $title,
+              'paragraph' => $paragraph,
+              'image' => $image,
+              'message2' => 'Form submitted',
+              'message' => ''
+            ];
+            $this->view('pages/template_contact', $data);
+          }
+        } 
+        else{
+          $title = $this->_page->title();
+          $paragraph = $this->_page->paragraph();
+          $image = $this->_page->image();
+       
+          $data = [
+            'title' => $title,
+            'paragraph' => $paragraph,
+            'image' => $image,
+            'message2' => 'Form not submitted',
+            'message' => ''
+          ];
+          $this->view('pages/template_contact', $data);
+        }
+      }
+      
       
       public function processFrom() {
         // add data or variables to the array using key-value pairs
         if(!empty($_POST['Prop']) && !empty($_POST['FName']) ) {
           if($this->_page->addcomment($_POST['Prop'], $_POST['FName'])) {
-            $data['title2'] = "Message added successfully";
-            //Redirect to home page
-            header("Location: ".URLROOT."pages/products");
-            exit;
+         
+            $title = $this->_page->title();
+            $paragraph = $this->_page->paragraph();
+            $image = $this->_page->image();
+            $comments = $this->_page->comments();
+            $data = [
+             'title' => $title,
+             'paragraph' => $paragraph,
+             'image' => $image,
+             'comments' => $comments,
+             'title2' => "Comment Submitted",
+           ];
+          
+            $this->view('pages/template_products', $data);
           }
+        }
+        else{
+          $title = $this->_page->title();
+          $paragraph = $this->_page->paragraph();
+          $image = $this->_page->image();
+          $comments = $this->_page->comments();
+          $data = [
+           'title' => $title,
+           'paragraph' => $paragraph,
+           'image' => $image,
+           'comments' => $comments,
+           'title2' => "Comment failed to submit",
+         ];
+        
+          $this->view('pages/template_products', $data);
         } 
+        
       }
 
       public function productlist(){

@@ -20,7 +20,7 @@
                 <h4 style="text-align:left; margin-left:20px;" class="card-title"><?php echo $staff['pname'] ?></h4>
                 <h5 style="text-align:left;margin-left:20px;">Brand: <?php echo $staff['brand'] ?></h5>
              
-                <p style="color:black;"><?php echo $staff['discription']?></p>
+                <h2 style="color:black; font-size:12px; text-align:left"><?php echo $staff['discription']?></h2>
                 <h5 style="text-align:left;margin-left:20px;">Rating: <?php echo $staff['rating'] ?></h5>
                 <h2 style="text-align:left; "><?php echo $staff['price'] ?></h2>
               

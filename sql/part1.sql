@@ -51,7 +51,7 @@ CREATE TABLE Products
 (
 ID int NOT NULL AUTO_INCREMENT,
 pname varchar(255) NOT NULL,
-discription varchar(255),
+discription varchar(2000),
 pimage varchar(255),
 price varchar(255),
 brand varchar(255),
@@ -147,10 +147,11 @@ use containerdb;
 INSERT INTO Products
     (pname, discription, pimage, price, brand, rating)
 VALUES 
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating'),
-('copmuter 1','very good bla bla bla','img1.jpg','$1999','acer','rating');
+('Lenovo V530s SFF','Responsive, reliable, and compact, the V530s desktop is the perfect choice for everyday business. Packed with the latest Intel® Core i processors, DDR4 memory, and high-speed PCIe SSD, this desktop handles multitasking and large files with ease, and will maximise your productivity in no time.','img6.webp','$1,729','Small device, big performance by Lenovo','8/10'),
+('Inspiron 24 3000 (AMD)','24-inch all-in-one desktop delivers seamless streaming for video and chats all in one place with Full HD on a wide-angle IPS display with pop-up webcam.','img7.webp','$1298','Stunning to watch. Easy to use.','8/10'),
+('Dell Desktop PC','Business-class and future-ready, the Lenovo V530 is a great choice for progressive IT managers looking for reliable, secure desktops. Design details like easy-access USB ports make users lives easier, while powerful Intel processing keeps them productive. Security features like Trusted Platform Module 2.0 provide peace of mind. And built-in tools like Lenovo Vantage make system management a snap.','img2.jpg','$1999','CORE i7 9th Gen','8/10'),
+('HP Pavilion','Part entertainment powerhouse and part productivity master, the HP Pavilion 24-R041A All-in-One Desktop is ready for whatever it is you’re into. From the edge-to-edge display to the stunningly modern design, go from streaming your favourite show to learning a new recipe on a PC that looks as great as it performs.','img8.jpg','$1479','Hewlette Packard 24-R041A All-in-One Desktop','5/10'),
+('Acer Chromebook','A cheap, portable way to get online with nothing getting in the way, this ultrathin and ultralight HD laptop is super portable making it easy-as to stay connective and productive. This brilliant bit of techno kit has all the bells and whistles you could want, can be easily slipped into almost any bag or case, and is available today at a nano price.','img4.jpg','$199.99','Acer, C720 Dual Core HD 16GB','6/10'),
+('MacBook Pro','Don’t wait any longer, join the I Revolution today with this amazingly priced genuine MacBook Pro from Apple. This smart, sassy bit of techy kit packs a real techno-punch when it comes to delivering fantastic user-friendly functionality with thoroughbred speed and finesse, yet still manages to look cooler than the top shelf of Samuel L. Jackson’s freezer.  An apple a day keeps the boredom at bay.','img5.jpg','$999','13" 2.5GHz 1TB HDD','7/10'),
+('Huracan 1080PXC','Whether your family is looking to surf, stream or tackle that next big assignment, this expencive gamer friendly machine has been redesigned to give everyone what they need. A splash of color and reliable, trusted performance make this the perfect living room go-to.','img1.jpg','$1999','ASUS ROG Huracan Gaming PC','10/10'),
+('ThinkCentre M920 SFF','Minimalist design. Maximum expression: Stunning in any setting, the ThinkCentre M920 SFF All-in One was designed to perfectly blend form and function. Its slim, modern look saves space on your desk, while the camera slide safeguard’s your family’s privacy.','img1.jpg','$1599','By Lenovo, Fast and reliable.','6/10');

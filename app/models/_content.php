@@ -54,6 +54,21 @@ class _content{
         }
 
     }
+    public function addcontact2($Name2, $Phone2, $Address2, $Time2){
+        $this->db->query('INSERT INTO  AppointmentRequest (name, Phone, Address, TimeRequested) VALUES (:Name2,:Phone2,:Address2,:Time2)');
+
+        $this->db->bind(':Name2', $Name2);
+        $this->db->bind(':Phone2', $Phone2);
+        $this->db->bind(':Address2', $Address2);
+        $this->db->bind(':Time2', $Time2);
+
+        if($this->db->execute()) {
+            return true;
+        } else {
+            return false;
+        }
+
+    }
     public function getSingleProduct() {
         $this->db->query("SELECT * FROM Products");
       
