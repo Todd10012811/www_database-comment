@@ -166,7 +166,7 @@
              'paragraph' => $paragraph,
              'image' => $image,
              'comments' => $comments,
-             'title2' => "Comment Submitted",
+             'title2' => "<h2 style='padding-top:60px;padding-bottom:0;margin-bottom:0;'>Comment Submitted</h2> <br> <p style='padding-top:0;margin-top:0;'>Comment will be moderated before posting</p>",
            ];
           
             $this->view('pages/template_products', $data);

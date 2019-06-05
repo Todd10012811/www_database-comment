@@ -6,14 +6,16 @@
         <h1>Products</h1><br>
         <form name="form2" class="form2" action="<?php echo URLROOT . 'pages/search/'; ?>" method="POST" >
                     
-                    <div><input type="text" name="usersearch" id="usersearch" cols="50vw" rows="5" style="height:38px; width:300px;"></textarea><input type="submit" style="width:200px;"class="button2" value="Search For Product"> <br></div>
-                 
-                  
+                        <div><input type="text" placeholder="search here"name="usersearch" class="usersearch" id="usersearch" cols="50vw" rows="5" ></textarea><input type='submit' class='button2' id='usersearch2' value="Search For Product"> 
+
+                        <form action="<?php echo URLROOT . 'pages/productlist/'; ?>">
+                    <button type="submit"  class="button2" id='usersearch3'>See all products...</button>
+                    </form>
+                    </div>
                     </form>
                    
                   
-          <div class='fuck'style='display: grid;
-  grid-template-columns: 1fr 1fr; grid-gap:20px; padding-left:20px; padding-right:20px; @media screen and (max-width: 650px){.fuck{grid-template-columns: 1fr 1fr }} '>
+          <div class='fuck' >
   
       
     
@@ -39,12 +41,18 @@
         <?php
     }
 ?>
-   
+
                 
       </div>
     </div>
     </div>
  
   </section>
-  <!-- importing the footer -->
+  <script>
+     
+     document.getElementById("1").className = "notcurrent";
+     document.getElementById("2").className = "current";
+     document.getElementById("3").className = "notcurrent";
+     document.getElementById("4").className = "notcurrent";
+  </script>
 <?php include(APPROOT . "/views/includes/footer.php"); ?>

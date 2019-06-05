@@ -20,18 +20,21 @@ class _content{
         return $this->db->resultSet();
     }
     public function comments(){
-        $this->db->query('SELECT * FROM Comments');
+        $this->db->query('SELECT * FROM Comments WHERE Approval = 1 ORDER BY TDate desc');
         return $this->db->resultSet();
     }
     public function addcomment($Prop,$FName) {
-      
+        $Approval = 0;
+        $TDate = date("d-m-y",time());
         //Adding data to database
-        $this->db->query('INSERT INTO  Comments (Prop,FName) VALUES (:Prop,:FName)');
+        $this->db->query('INSERT INTO  Comments (Prop,FName,TDate,Approval) VALUES (:Prop,:FName,:TDate,:Approval)');
   
         //Binding Variables
         $this->db->bind(':Prop', $Prop);
         $this->db->bind(':FName', $FName);
-  
+        $this->db->bind(':TDate', $TDate);
+        $this->db->bind(':Approval', $Approval);
+
         //Return true or false, based on if query is successful or not
         if($this->db->execute()) {
             return true;
@@ -88,6 +91,9 @@ class _content{
 
     public function search($id){
         $this->db->query("SELECT * FROM Products WHERE pname LIKE '%$id%'");
+        $this->db->query("SELECT * FROM Products WHERE discription LIKE '%$id%'");
+        $this->db->query("SELECT * FROM Products WHERE brand LIKE '%$id%'");
+       
     
         return $this->db->resultSet();
 

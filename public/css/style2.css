@@ -18,6 +18,25 @@ body{
  
    
 }
+
+.fuck{
+  display:grid;
+    grid-template-columns: 1fr 1fr; 
+  grid-gap:20px; padding-left:20px; padding-right:20px; }
+
+ 
+  .usersearch{
+    height:38px; 
+    width:30%; 
+    margin-right:10px;
+}
+#usersearch2{
+    width:30%;
+}
+#usersearch3{
+    width:30%;
+    background-color:green;  margin-top:10px;
+}
 #banner {  
   
     width: var(--MainContainerWidth);
@@ -73,7 +92,7 @@ li:hover{
  background-color: #00af09;
  border-radius: 10px;
 }
-#current {
+nav .current {
     background-color:#008307;   
     border-radius: 10px;
 }
@@ -480,6 +499,28 @@ footer{
 
 }
 @media screen and (max-width: 650px){
+   
+ 
+    .usersearch{
+        height:38px; 
+        width:40%; 
+        margin-right:10px;
+    }
+    #usersearch2{
+        width:40%;
+    }
+    #usersearch3{
+        width:84%;
+        background-color:green;  margin-top:10px;
+    }
+
+
+
+    .fuck{
+     display: grid;
+     grid-template-columns: 1fr 
+ }  
+   
     nav ul li{
         display: inline;
         
@@ -594,5 +635,7 @@ p{
     background-color: red;
     color: red
 }
+
+
 
 }

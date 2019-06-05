@@ -62,5 +62,11 @@
         </div>
      </section>
 
-<!-- importing the footer -->
+     <script>
+     
+     document.getElementById("1").className = "current";
+     document.getElementById("2").className = "notcurrent";
+     document.getElementById("3").className = "notcurrent";
+     document.getElementById("4").className = "notcurrent";
+  </script>
 <?php include(APPROOT . "/views/includes/footer.php"); ?>

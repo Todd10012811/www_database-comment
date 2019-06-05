@@ -1,7 +1,6 @@
 <!-- importing the header -->
 <?php include(APPROOT . "/views/includes/header.php"); ?> 
 <section>
-
         <div class="container1">
             <div class="content4">
                <div class="box1">
@@ -53,6 +52,14 @@
             </div>
         </div>
         <script> 
+     
+
+     document.getElementById("4").className = "current";
+     document.getElementById("1").className = "notcurrent";
+     document.getElementById("2").className = "notcurrent";
+     document.getElementById("3").className = "notcurrent";
+
+
 function validation()                                   
 { 
     var _fname = document.forms["form"]["FName"];               

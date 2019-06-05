@@ -12,19 +12,19 @@
                         <!-- Full-width images with number and caption text -->
                         <div class="mySlides1 fade1">
                             <div class="numbertext1">1 / 3</div>
-                            <img src="<?php echo $data['image'][3]['Prop']; ?>" style="width:100%">
+                            <a href="<?php echo URLROOT . '/Pages/singleProduct/8'?>"> <img src="<?php echo $data['image'][3]['Prop']; ?>" style="width:100%"></a>
                             <div class="text1"><?php echo $data['title'][11]['Properties']; ?></div>
                         </div>
 
                         <div class="mySlides1 fade1">
                             <div class="numbertext1">2 / 3</div>
-                            <img src="<?php echo $data['image'][4]['Prop']; ?>" style="width:100%">
+                            <a href="<?php echo URLROOT . '/Pages/singleProduct/3'?>"> <img src="<?php echo $data['image'][4]['Prop']; ?>" style="width:100%"></a>
                             <div class="text1"><?php echo $data['title'][33]['Properties']; ?></div>
                         </div>
 
                         <div class="mySlides1 fade1">
                             <div class="numbertext1">3 / 3</div>
-                            <img src="<?php echo $data['image'][5]['Prop']; ?>" style="width:100%">
+                            <a href="<?php echo URLROOT . '/Pages/singleProduct/7'?>"><img src="<?php echo $data['image'][5]['Prop']; ?>" style="width:100%"></a>
                             <div class="text1"><?php echo $data['title'][34]['Properties']; ?></div>
                         </div>
 
@@ -117,29 +117,29 @@
                     <input type="submit" class="button2" value="submit"> <br>
                     <h2>Comments:</h2>
                     <div style="display: grid;
-  grid-template-columns: 1fr 1fr   ; grid-gap:20px; padding-left:20px; padding-right:20px;">
+  grid-template-columns: 1fr 1fr  ; grid-gap:20px; padding-left:20px; padding-right:20px;">
                     <?php 
                       $output = "";
                  
                       foreach($data['comments'] as $item) {
-                   
-                      $output .= "<div><h2 style='padding:0; margin:0;'>";
+       
+                      $output .= "<div style='padding-bottom:20px; '><h2 style='padding:0; margin:0;'>";
                       $output .= $item['FName'];  
-                      $output .= " says:";
-                      $output .= "</h2>";
-                      $output .= "<h3 style='padding:0; margin:0;'>";
-                      $output .= $item['TDate'];
-                      $output .= "</h3>";
+                      $output .= " says:</h2>";
                       $output .= "<p style='padding:0; margin:0;'>";
                       $output .= $item['Prop'];
-                      $output .= "<p></div>";
-                    
+                      $output .= " <br>Comment posted on ";            
+                      $output .= $item['TDate'];
+                      $output .= "</p>";
+                  
+                      $output .= "</h2></div>";
+                  
                  
                     }
 
                     echo $output;
                 ?></div>
-                   <h2><?php echo $data['title2'] ?>!</h2>
+                   <?php echo $data['title2'] ?>
                     </form>
                   
                     </div>
@@ -154,6 +154,13 @@
     </section>
   
     <script>
+      
+     
+     document.getElementById("1").className = "notcurrent";
+     document.getElementById("2").className = "current";
+     document.getElementById("3").className = "notcurrent";
+     document.getElementById("4").className = "notcurrent";
+
 
     function validation3(){
   var _name = document.forms["form3"]["FName"];  

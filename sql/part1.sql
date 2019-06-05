@@ -1,15 +1,22 @@
 use containerdb;
+drop table AppointmentRequest
+use containerdb;
+drop table ContactForm
+use containerdb;
+drop table Content
+use containerdb;
+drop table Images
+use containerdb;
+drop table Comments
+use containerdb;
+drop table Products
 
-
-CREATE TABLE AppointmentRequest (
-  IDN varchar(10) NOT NULL,
+use containerdb;
+create TABLE AppointmentRequest (
   name VARCHAR(30) NOT NULL,
   Phone Varchar(30)NOT NULL,
   Address varchar(100)NOT NULL,
-  TimeRequested varchar(30)NOT NULL,
-  FK varchar(10) NOT Null,
-  PRIMARY KEY (IDN)
-  
+  TimeRequested varchar(30)NOT NULL
   );
 
 use containerdb;
@@ -23,7 +30,7 @@ create TABLE ContactForm (
 
 	
 );
-
+use containerdb;
 CREATE TABLE Content (
   IDN varchar(10) ,
   Properties TEXT,
@@ -31,19 +38,21 @@ CREATE TABLE Content (
   PRIMARY KEY (IDN)
 	
 );
-
+use containerdb;
 CREATE TABLE Images (
   Indx VARCHAR(10),
   Prop TEXT
 	
 );
 
-
-CREATE TABLE Comments (
-  Indx VARCHAR(10),
+use containerdb;
+create TABLE Comments (
+  Indx int not null AUTO_INCREMENT,
   Prop TEXT,
   FName varchar(30),
-  TDate varchar (15)
+  TDate varchar (15),
+  Approval int (15),
+  PRIMARY KEY (Indx)
 	
 );
 use containerdb;
@@ -59,19 +68,19 @@ rating varchar(255),
 PRIMARY KEY (ID)
 )
 
-
+use containerdb;
 INSERT INTO AppointmentRequest
-    (name, Address, TimeRequested, Phone, IDN, FK) 
+    (name, Address, TimeRequested, Phone) 
 VALUES 
-   ("Johnny Hobson", "12 hepburn street", "12/4/2019 @ 10am", "0222765451","041", "4000"),
-('Sarah Makkie', '86 dignan drive', '12/4/2019 @ 11am', '0214569493','042','4000'),
-('Lawrence Hunt', '8 curtan terracee', '13/4/2019 @ 2pm', '0276664443','043','4000'),
-('Mike Oxlong', '45 bupkin street', '16/5/2019 @ 1pm', '0211599873','044','4000'),
-('Jerry Canister', '875 great south road', '13/4/2019 @3pm', '0223164971','045','4000'),
-('Dick Winters', '23 sunny drive', '12/4/2019 @ 4pm', '0278156432','046','4000');
+   ("Johnny Hobson", "12 hepburn street", "12/4/2019 @ 10am", "0222765451"),
+('Sarah Makkie', '86 dignan drive', '12/4/2019 @ 11am', '0214569493'),
+('Lawrence Hunt', '8 curtan terracee', '13/4/2019 @ 2pm', '0276664443'),
+('Mike Oxlong', '45 bupkin street', '16/5/2019 @ 1pm', '0211599873'),
+('Jerry Canister', '875 great south road', '13/4/2019 @3pm', '0223164971'),
+('Dick Winters', '23 sunny drive', '12/4/2019 @ 4pm', '0278156432');
+
 
 use containerdb;
-
 INSERT INTO ContactForm 
     (FName, Lname, Email, Phone) 
 VALUES 
@@ -82,7 +91,7 @@ VALUES
 ('Bob', 'Royal', 'RoyalShinizzle@hotmail.com', '0226517954'),
 ('Brooke', 'Peterson', 'Chooky2019@gmail.com', '0278156432');
 
-
+use containerdb;
 INSERT INTO Content
     (Something, Properties, IDN)
 VALUES 
@@ -123,7 +132,7 @@ VALUES
 ('Paragraph', 'ASUS ROG Huracan Gaming PC<br>$1999', '036'),
 ('Heading', 'Legislation', '037')
 ;
-
+use containerdb;
 INSERT INTO Images
     (Indx, Prop)
 VALUES 
@@ -136,12 +145,12 @@ VALUES
 
 use containerdb;
 INSERT INTO Comments
-    (Indx, Prop, FName)
+    (Prop, FName, TDate, Approval)
 VALUES 
-('0','gfgdgh','bob'),
-('1','gfdgfd','sam'),
-('2','fdgfdgfd','woody'),
-('3','gfdgfd','lesley');
+('Comment 1, bla bla bla','Bob','02-05-19',1),
+('Comment 2, bla bla bla','Sam','04-08-18',1),
+('Comment 3, bla bla bla','Woody','21-07-17',1),
+('Comment 4, bla bla bla','Lesley','12-3-16',0);
 
 use containerdb;
 INSERT INTO Products
@@ -153,5 +162,5 @@ VALUES
 ('HP Pavilion','Part entertainment powerhouse and part productivity master, the HP Pavilion 24-R041A All-in-One Desktop is ready for whatever it is you’re into. From the edge-to-edge display to the stunningly modern design, go from streaming your favourite show to learning a new recipe on a PC that looks as great as it performs.','img8.jpg','$1479','Hewlette Packard 24-R041A All-in-One Desktop','5/10'),
 ('Acer Chromebook','A cheap, portable way to get online with nothing getting in the way, this ultrathin and ultralight HD laptop is super portable making it easy-as to stay connective and productive. This brilliant bit of techno kit has all the bells and whistles you could want, can be easily slipped into almost any bag or case, and is available today at a nano price.','img4.jpg','$199.99','Acer, C720 Dual Core HD 16GB','6/10'),
 ('MacBook Pro','Don’t wait any longer, join the I Revolution today with this amazingly priced genuine MacBook Pro from Apple. This smart, sassy bit of techy kit packs a real techno-punch when it comes to delivering fantastic user-friendly functionality with thoroughbred speed and finesse, yet still manages to look cooler than the top shelf of Samuel L. Jackson’s freezer.  An apple a day keeps the boredom at bay.','img5.jpg','$999','13" 2.5GHz 1TB HDD','7/10'),
-('Huracan 1080PXC','Whether your family is looking to surf, stream or tackle that next big assignment, this expencive gamer friendly machine has been redesigned to give everyone what they need. A splash of color and reliable, trusted performance make this the perfect living room go-to.','img1.jpg','$1999','ASUS ROG Huracan Gaming PC','10/10'),
+('Huracan 1080PXC','Whether your family is looking to surf, stream or tackle that next big assignment, this expencive gamer friendly machine has been redesigned to give everyone what they need. A splash of color and reliable, trusted performance make this the perfect living room go-to.','img3.jpg','$1999','ASUS ROG Huracan Gaming PC','10/10'),
 ('ThinkCentre M920 SFF','Minimalist design. Maximum expression: Stunning in any setting, the ThinkCentre M920 SFF All-in One was designed to perfectly blend form and function. Its slim, modern look saves space on your desk, while the camera slide safeguard’s your family’s privacy.','img1.jpg','$1599','By Lenovo, Fast and reliable.','6/10');
