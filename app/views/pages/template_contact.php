@@ -54,11 +54,11 @@
         <script> 
      
 
-     document.getElementById("4").className = "current";
+ 
      document.getElementById("1").className = "notcurrent";
      document.getElementById("2").className = "notcurrent";
      document.getElementById("3").className = "notcurrent";
-
+     document.getElementById("4").className = "current";
 
 function validation()                                   
 { 
@@ -70,27 +70,27 @@ function validation()
    
     if (_fname.value == "")                                  
     { 
-        window.alert("Please enter your first name.1"); 
+        window.alert("Please enter your first name"); 
         _fname.focus(); 
         return false; 
     } 
     else if (allLetter(_fname) == false)                                  
     { 
-        window.alert("Your Name Must only contain letters2"); 
+        window.alert("Your Name Must only contain letters"); 
         _fname.focus(); 
         return false; 
     } 
    
     else if (_lname.value == "")                           
     { 
-        window.alert("Please enter your last name.3"); 
+        window.alert("Please enter your last name"); 
         _lname.focus(); 
         return false; 
     } 
 
     else if (allLetter(_lname) == false)                                  
     { 
-        window.alert("Your last Name Must only contain letters4"); 
+        window.alert("Your last Name Must only contain letters"); 
         _lname.focus(); 
         return false; 
     } 
@@ -124,7 +124,7 @@ function validation()
     } 
     else if (allNumbers(_phone) == false)                                  
     { 
-        window.alert("Your Phone number only contain numbers"); 
+        window.alert("Your Phone number can only contain numbers"); 
         _phone.focus(); 
         return false; 
     } 
@@ -162,21 +162,21 @@ function validation2()
    
     if (name.value == "")                                  
     { 
-        window.alert("Please enter your name.5"); 
+        window.alert("Please enter your name"); 
         name.focus(); 
         return false; 
     } 
 
     else if (allLetter(name) == false)                                  
     { 
-        window.alert("Your Name Must only contain letters2"); 
+        window.alert("Your Name Must only contain letters"); 
         name.focus(); 
         return false; 
     } 
    
     else if (phone.value == "")                           
     { 
-        window.alert("Please enter your telephone number.6"); 
+        window.alert("Please enter your telephone number"); 
         phone.focus(); 
         return false; 
     } 

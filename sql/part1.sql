@@ -96,7 +96,7 @@ INSERT INTO Content
     (Something, Properties, IDN)
 VALUES 
 ('Heading', 'Main Article Content', '001'),
-('Paragraph', 'dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur', '002'),
+('Paragraph', 'The purpose of this website is to replicate the website design from assignment 1. This websites is driven by a multi teired system called MVC which stands for model view controller. The content in this website is database driven through MVC an implimented through means of php, html, css, javascript, and SQL. The way MVC works is simple which is described in laymans terms. The user interacts with the Controller making requests such as pressing on links or nav buttons. The Controller contacts the Model with the users request. The Model then retrives and manipulates data from the Database and returns the data to the Controller. The Controller then delivers the data to the view.The View then displays the data in human readible form. For more infromation on MVC <a href="https://moodle.toiohomai.ac.nz/course/view.php?id=1776">Click Here.</a>    ', '002'),
 ('Heading', 'Location', '003'),
 ('Paragraph', 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni', '004'),
 ('Heading', 'Upgrade', '005'),
@@ -147,10 +147,12 @@ use containerdb;
 INSERT INTO Comments
     (Prop, FName, TDate, Approval)
 VALUES 
-('Comment 1, bla bla bla','Bob','02-05-19',1),
-('Comment 2, bla bla bla','Sam','04-08-18',1),
-('Comment 3, bla bla bla','Woody','21-07-17',1),
-('Comment 4, bla bla bla','Lesley','12-3-16',0);
+('culpa facere nemo laboriosam ex minus hic dolore, fuga cupiditate corporis quis officiis. Voluptatibus omnis expedita, soluta ipsam ita','Bob','02-05-16',1),
+('iure officiis officia sint totam libero aspernatur corporis blanditiis sunt enim reiciendis magni molestiae cum neque consequuntur deleniti? Sint, voluptate. ','Sam','04-08-17',1),
+('id aliquam quam veniam, sint eaque. Ea quisquam fugit facere illo aut, aliquid et quae vel velit labore quidem distinctio sit eligendi magnam facilis nulla ','Woody','21-07-18',1),
+('ipsam unde, sunt laudantium dolorem laboriosam eaque? Dicta minus labore pariatur iste ad dolores nesciunt architecto consequatur? Doloribus, iure ','Lesley','13-3-19',1),
+('perspiciatis. Impedit consequatur placeat eveniet maxime reiciendis accusamus ab, ratione quibusdam ut consequuntur magni reprehenderit at neque, mollitia et ','Riley','12-4-19',1),
+('architecto sequi, minima tempore inventore! Porro quidem perferendis aliquid quos beatae quaerat commodi eum ab molestiae, dicta distinctio placeat laborum ','Jeff','30-5-19',0);
 
 use containerdb;
 INSERT INTO Products

@@ -5,7 +5,7 @@
         <div class="container1">
             <div class="content2">
                <div class="box1"> <h1><?php echo $data['title'][0]['Properties']; ?></h1> <img id='image1' src="<?php echo $data['image'][0]['Prop']; ?>" alt="computer repair"><p><?php echo $data['paragraph'][1]['Properties']; ?></p></div>
-               <div class="box2"><h1><?php echo $data['title'][2]['Properties']; ?></h1> <p><?php echo $data['paragraph'][3]['Properties']; ?></p> <div class="map1"><iframe id="map1" src="<?php echo $data['image'][1]['Prop']; ?>"  frameborder="0" style="border:0" allowfullscreen></iframe></div> </div>
+               <div class="box2"><h1><?php echo $data['title'][2]['Properties']; ?></h1> <p><?php echo $data['paragraph'][3]['Properties']; ?></p> <div class="map1"><iframe id="map1" src="<?php echo $data['image'][1]['Prop']; ?>"  frameborder="0" style="border:0" allowfullscreen></iframe><p style="text-align:left"><?php echo $data['paragraph'][3]['Properties']; ?></p></div> </div>  
                <div class="box3"><h1><?php echo $data['title'][4]['Properties']; ?></h1>
                     <div class="container">
                             <div class="card-deck mb-3 text-center">

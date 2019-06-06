@@ -41,7 +41,7 @@
                         <span class="dot1" onclick="currentSlide(3)"></span>
                     </div>
                     <form action="<?php echo URLROOT . 'pages/productlist/'; ?>">
-                    <button type="submit"  style="background-color:green;" class="btn btn-lg btn-block btn-primary">Jeff Click Here To See All Our Products! </button>
+                    <button type="submit"  style="background-color:green; width:50%; margin:0 auto; margin-bottom:10px; font-size:16px; min-width:300px; "  class="btn btn-lg btn-block btn-primary">Jeff Click Here To <br> See All Products</button>
                     </form>
                   </div>
                 <div class="box2">
@@ -112,12 +112,11 @@
                     <h2><?php echo $data['title'][20]['Properties']; ?></h2>
                     <form name="form3" class="form2" action="<?php echo URLROOT . 'pages/processFrom/'; ?>" onsubmit="return validation3()" method="POST" >
                     
-                    <div><textarea name="Prop" id="Prop" cols="50vw" rows="5"></textarea></div>
+                    <div><textarea name="Prop" id="Prop" cols="30vw" rows="5"></textarea></div>
                    <br> <p>Name: <input type="text" name="FName" id="FName"></p> 
                     <input type="submit" class="button2" value="submit"> <br>
                     <h2>Comments:</h2>
-                    <div style="display: grid;
-  grid-template-columns: 1fr 1fr  ; grid-gap:20px; padding-left:20px; padding-right:20px;">
+                    <div id='comments'>
                     <?php 
                       $output = "";
                  
@@ -128,9 +127,9 @@
                       $output .= " says:</h2>";
                       $output .= "<p style='padding:0; margin:0;'>";
                       $output .= $item['Prop'];
-                      $output .= " <br>Comment posted on ";            
+                      $output .= " <br><h2 style='padding:0; margin:0;'>Comment posted on <br> ";            
                       $output .= $item['TDate'];
-                      $output .= "</p>";
+                      $output .= "</h2></p>";
                   
                       $output .= "</h2></div>";
                   

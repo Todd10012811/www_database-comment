@@ -20,7 +20,7 @@ class _content{
         return $this->db->resultSet();
     }
     public function comments(){
-        $this->db->query('SELECT * FROM Comments WHERE Approval = 1 ORDER BY TDate desc');
+        $this->db->query('SELECT * FROM Comments WHERE Approval = 1 ORDER BY Indx');
         return $this->db->resultSet();
     }
     public function addcomment($Prop,$FName) {

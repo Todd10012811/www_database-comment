@@ -18,8 +18,14 @@ body{
  
    
 }
+#center #comments{
 
-.fuck{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ; 
+    grid-gap:20px; padding-left:20px; 
+    padding-right:20px;}
+
+  .fuck{
   display:grid;
     grid-template-columns: 1fr 1fr; 
   grid-gap:20px; padding-left:20px; padding-right:20px; }
@@ -208,8 +214,8 @@ h3{
   }
 
 .map1 #map1{
-    width:30vw;
-    height:30vw;
+    width:25vw;
+    height:25vw;
 
 }
 #image1{
@@ -264,9 +270,9 @@ h3{
     
 }
 #map {
-    height:300px ;  /* The height is 400 pixels */
+    height:300px ; 
     width: 80%;
-    margin:0 auto; /* The width is the width of the web page */
+    margin:0 auto; 
     padding-bottom: 10px;
    }
 
@@ -635,7 +641,12 @@ p{
     background-color: red;
     color: red
 }
+#center #comments{
 
+    display: grid;
+    grid-template-columns: 1fr  ; 
+    grid-gap:20px; padding-left:20px; 
+    padding-right:20px;}
 
 
 }
